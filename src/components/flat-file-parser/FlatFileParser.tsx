@@ -147,7 +147,7 @@ const FixedWidthParser: React.FC = () => {
             setError('Invalid field mapping format');
           }
         } catch (error) {
-          setError('Error parsing JSON file');
+          setError(`Error parsing JSON file - ${error}`);
         }
       };
       reader.readAsText(file);
