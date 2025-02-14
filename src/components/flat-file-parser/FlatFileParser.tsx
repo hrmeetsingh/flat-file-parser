@@ -22,7 +22,7 @@ interface ParsedRecord {
   [key: string]: string;
 }
 
-const FixedWidthParser: React.FC = () => {
+const FlatFileParser: React.FC = () => {
   const [fields, setFields] = useState<Field[]>([]);
   const [newField, setNewField] = useState<NewField>({ name: '', start: '', end: '' });
   const [fileContent, setFileContent] = useState<string>('');
@@ -158,7 +158,7 @@ const FixedWidthParser: React.FC = () => {
     <div className="p-4 max-w-6xl mx-auto space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>Fixed Width File Parser</CardTitle>
+          <CardTitle>Flat File Parser</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -310,4 +310,4 @@ const FixedWidthParser: React.FC = () => {
   );
 };
 
-export default FixedWidthParser;
+export default FlatFileParser;
